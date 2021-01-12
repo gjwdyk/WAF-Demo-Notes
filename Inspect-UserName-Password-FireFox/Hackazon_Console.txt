@@ -1,0 +1,11 @@
+This page uses the non standard property “zoom”. Consider using calc() in the relevant property values, or using “transform” along with “transform-origin: 0 0”. login
+Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead jquery-1.11.1.js:17:24
+JQMIGRATE: Logging is active jquery-migrate-1.2.1.js:21:17
+document.getElementById("username").value
+"Hendry"
+document.getElementById("password").value
+"Chandra"
+username.value
+"Hendry"
+password.value
+"Chandra"
