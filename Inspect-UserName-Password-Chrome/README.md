@@ -4,7 +4,8 @@
 
 ![DVWA Rendered](DVWA_Rendered.png)
 
-On the rendered login screen, right-click on the "usename" field, and choose menu "inspect".
+On the rendered login screen, right-click on the "usename" field, and choose menu "inspect".<br>
+The "Elements" window will focus on the username field. Study the structure of the username element.
 
 ![DVWA Elements UserName](DVWA_Elements_UserName.png)
 
