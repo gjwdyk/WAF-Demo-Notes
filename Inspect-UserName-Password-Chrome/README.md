@@ -1,4 +1,4 @@
-# Inspect UserName and Password Input Field on Chrome
+# Inspect UserName and Password Input Field on Chrome (including Microsoft Edge)
 
 Obtaining the "username" and "password" information from Input Field of a browser depends on:
 - [ ] The Browser itself. Some browsers provide shortcut commands, others don't. But they all share a formal syntax to obtain the "username" and "password" information from the Input Field.
