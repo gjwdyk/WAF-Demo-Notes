@@ -1,0 +1,4 @@
+document.getElementById("username").value
+"Hendry"
+document.getElementById("password").value
+"Chandra"

@@ -1,0 +1,4 @@
+document.getElementsByClassName("loginInput").username.value
+"Hendry"
+document.getElementsByClassName("loginInput").password.value
+"Chandra"
