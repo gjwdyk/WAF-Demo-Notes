@@ -49,3 +49,13 @@ document.getElementById("password").value
 After each command, the previously entered User Name and Password information will be printed out on the console.
 
 
+
+╔═╦═════════════════╦═╗
+║ ║                 ║ ║
+╠═╬═════════════════╬═╣
+║ ║ End of Document ║ ║
+╠═╬═════════════════╬═╣
+║ ║                 ║ ║
+╚═╩═════════════════╩═╝
+
+
