@@ -1,0 +1,6 @@
+Some cookies are misusing the recommended “SameSite“ attribute 5
+Cookie “f5avr1967529528aaaaaaaaaaaaaaaa_cspm_” has been rejected because it is already expired. login.php
+document.getElementsByClassName("loginInput").username.value
+"Hendry"
+document.getElementsByClassName("loginInput").password.value
+"Chandra"

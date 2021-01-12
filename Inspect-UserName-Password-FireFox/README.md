@@ -1,4 +1,4 @@
-# Inspect UserName and Password Input Field on Chrome
+# Inspect UserName and Password Input Field on FireFox
 
 Obtaining the "username" and "password" information from Input Field of a browser depends on:
 - [ ] The Browser itself. Some browsers provide shortcut commands, others don't. But they all share a formal syntax to obtain the "username" and "password" information from the Input Field.
@@ -10,13 +10,13 @@ Obtaining the "username" and "password" information from Input Field of a browse
 
 ![DVWA Rendered](DVWA_Rendered.png)
 
-On the rendered login screen, enter a User Name and Password information for the demo. Then right-click on the "usename" field, and choose menu "Inspect". The "Elements" window will focus on the "username" field. Study the structure of the "username" element.
+On the rendered login screen, enter a User Name and Password information for the demo. Then right-click on the "usename" field, and choose menu "Inspect Element". The "Inspector" window will focus on the "username" field. Study the structure of the "username" element.
 
-![DVWA Elements UserName](DVWA_Elements_UserName.png)
+![DVWA Elements UserName](DVWA_Inspector_UserName.png)
 
-Similarly, on the rendered login screen, right-click on the "password" field, and choose menu "Inspect". The "Elements" window will focus on the "password" field. Study the structure of the "password" element.
+Similarly, on the rendered login screen, right-click on the "password" field, and choose menu "Inspect Element". The "Inspector" window will focus on the "password" field. Study the structure of the "password" element.
 
-![DVWA Elements Password](DVWA_Elements_Password.png)
+![DVWA Elements Password](DVWA_Inspector_Password.png)
 
 On "Console" tab, enter the commands :
 
@@ -35,11 +35,11 @@ After each command, the previously entered User Name and Password information wi
 
 ![Hackazon Rendered](Hackazon_Rendered.png)
 
-On the rendered login screen, enter a User Name and Password information for the demo. Then right-click on the "usename" field, and choose menu "Inspect". The "Elements" window will focus on the "username" field. Study the structure of the "username" element.
+On the rendered login screen, enter a User Name and Password information for the demo. Then right-click on the "usename" field, and choose menu "inspect". The "Elements" window will focus on the "username" field. Study the structure of the "username" element.
 
 ![Hackazon Elements UserName](Hackazon_Elements_UserName.png)
 
-Similarly, on the rendered login screen, right-click on the "password" field, and choose menu "Inspect". The "Elements" window will focus on the "password" field. Study the structure of the "password" element.
+Similarly, on the rendered login screen, right-click on the "password" field, and choose menu "inspect". The "Elements" window will focus on the "password" field. Study the structure of the "password" element.
 
 ![Hackazon Elements Password](Hackazon_Elements_Password.png)
 
