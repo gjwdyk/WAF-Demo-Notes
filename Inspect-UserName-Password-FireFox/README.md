@@ -50,6 +50,13 @@ document.getElementById("username").value
 document.getElementById("password").value
 ```
 
+Alternatively, in this case (FireFox with Hackazon site), there is a shortcut command as below:
+
+```
+username.value
+password.value
+```
+
 ![Hackazon Console](Hackazon_Console.png)
 
 After each command, the previously entered User Name and Password information will be printed out on the console.
