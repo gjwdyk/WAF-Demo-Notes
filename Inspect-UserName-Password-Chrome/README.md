@@ -1,5 +1,11 @@
 # Inspect UserName and Password Input Field on Chrome
 
+Obtaining the "username" and "password" information from Input Field of a browser depends on:
+- [ ] The Browser itself. Some browsers provide shortcut commands, others don't. But they all share a formal syntax to obtain the "username" and "password" information from the Input Field.
+- [ ] The Source Code of the page itself. Each pages structured uniquely, differently depending on the developer. Study towards the page structure must be done BEFORE the Demo.
+
+
+
 ## DVWA
 
 ![DVWA Rendered](DVWA_Rendered.png)
