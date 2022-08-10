@@ -50,13 +50,13 @@ Got 9876543210
 ## Copy the Captured Traffic to Your Terminal
 
 Copy the captured traffic to your terminal. Here it is assumed that you're using Windows and [WireShark](https://www.wireshark.org/) .
-If you're using WinSCP to download the captured file from Big-IP, sometimes WinSCP may have some error in Drag and Drop files (to copy to/from remote Big-IP unit):
+If you're using WinSCP to download the captured file from Big-IP, sometimes WinSCP may have some error in Drag and Drop files (to copy to/from remote Big-IP unit):<br>
 ![WinSCP Error in Drag and Drop File](WinSCP-Error.png)
 
-You can try instead to Copy and Paste using the WinSCP menu; i.e. through right-click on the file you want to copy:
+You can try instead to Copy and Paste using the WinSCP menu; i.e. through right-click on the file you want to copy:<br>
 ![WinSCP Copy](WinSCP-Copy.png)
 
-And right-click on the directory you want the file to be copied into on your local host.
+And right-click on the directory you want the file to be copied into on your local host.<br>
 ![WinSCP Paste](WinSCP-Paste.png)
 
 
