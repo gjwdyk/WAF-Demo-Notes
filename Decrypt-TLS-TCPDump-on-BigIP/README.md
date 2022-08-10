@@ -33,7 +33,7 @@ sys db tcpdump.sslprovider {
 
 
 
-## Capture Traffic with `--f5 ssl` flag
+## Capture Traffic with `--f5 ssl` flag on Big-IP
 
 To utilize the (newly) enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: ``tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap`` .
 
@@ -67,7 +67,7 @@ And right-click on the directory you want the file to be copied into on your loc
 
 
 
-## Create Pre-Master Secret Log File Using `tshark`
+## Create Pre-Master Secret Log File Using `tshark` on Your Terminal
 
 PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with WireShark by default. You can find `tshark.exe` in the installation directory of WireShark.
 If you use default installation directory, you may be able to find it inside `C:\Program Files\Wireshark\`
@@ -104,7 +104,7 @@ C:\Users\HC\Downloads>
 
 
 
-## Enable F5 Ethernet Trailers for TLS at WireShark
+## Enable F5 Ethernet Trailers for TLS at WireShark on Your Terminal
 
 Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector enabled.
 
@@ -116,7 +116,7 @@ Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector e
 
 
 
-## Load Pre-Master Secret Log File into WireShark
+## Load Pre-Master Secret Log File into WireShark on Your Terminal
 
 Load the Pre-Master Secret Log file into WireShark to decrypt TLS payload:
 
@@ -136,7 +136,7 @@ You should now be able to decrypt TLS payload/data on connections which you capt
 
 
 
-## Review Decrypted HTTPS (HTTP over TLS) Messages
+## Review Decrypted HTTPS (HTTP over TLS) Messages on Your Terminal
 
 To review decrypted messages faster, try to filter the displayed packets with `tcp.port==443`, then look for HTTP protocol (usually coloured differently).
 
@@ -150,7 +150,7 @@ You can now review the plain/decrypted HTTP communications between the Client an
 
 
 
-## Disable TLS Session Secret Ethernet Trailers
+## Disable TLS Session Secret Ethernet Trailers on Big-IP
 
 For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature, once you're finish with the Packet Capture activities: `tmsh modify sys db tcpdump.sslprovider value disable` .
 
