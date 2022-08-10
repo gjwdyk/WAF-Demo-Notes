@@ -152,7 +152,7 @@ Load the Pre-Master Secret Log file into WireShark to decrypt TLS payload:
 - [ ] Scroll down the supported protocols list until you find `TLS`. Click on the `TLS` item. The menu on the right should change to display attributes of the `TLS` protocol<br>
    ![WireShark Preferences Protocols TLS](WireShark-Preferences-Protocols-TLS.png)
 
-- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret file (i.e. from the example above, it is 'pre_master_log.pms' file) and click Open, and then click OK<br>
+- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret file (i.e. from the example above, it is `C:\Users\HC\Downloads\pre_master_log.pms` file) and click Open, and then click OK<br>
    ![WireShark Preferences Protocols TLS PreMasterSecret](WireShark-Preferences-Protocols-TLS-PreMasterSecret.png)
 
 You should now be able to decrypt TLS payload/data on connections which you captured the Pre-Master Secret information.
