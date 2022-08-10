@@ -35,7 +35,11 @@ sys db tcpdump.sslprovider {
 
 ## Capture Traffic with `--f5 ssl` flag on Big-IP
 
-To utilize the (newly) enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: ``tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap`` .
+To utilize the (newly) enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump.
+Example: ``tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap`` .
+
+Note that to be able to review the plain/decrypted TLS payload, you ***must ensure*** that the start of the TLS connections were recorded by the TCPDump.
+This means: you execute the TCPDump command first, before you open the browser and browse to the URL of the service you want to troubleshoot.
 
 ```
 [admin@ip-10-1-1-245:Active:Standalone] ~ # tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap
