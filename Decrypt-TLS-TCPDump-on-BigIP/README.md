@@ -53,6 +53,25 @@ The same warning is also displayed when you do TCPDump: `tcpdump: WARNING: Using
 
 
 
+## Disable TLS Session Secret Ethernet Trailers on Big-IP
+
+For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature, once you're finish with the Packet Capture activities: `tmsh modify sys db tcpdump.sslprovider value disable` .
+
+```
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
+sys db tcpdump.sslprovider {
+    value "enable"
+}
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh modify sys db tcpdump.sslprovider value disable
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
+sys db tcpdump.sslprovider {
+    value "disable"
+}
+[admin@ip-10-1-1-245:Active:Standalone] ~ #
+```
+
+
+
 ## Copy the Captured Traffic to Your Terminal
 
 Copy the captured traffic to your terminal. This document assumes that you're using Windows and [WireShark](https://www.wireshark.org/) .
@@ -147,25 +166,6 @@ Right-click on the HTTP line item, and from the pop-up menu select `Follow` > `T
 ![WireShark FollowTLSStream](WireShark-FollowTLSStream.png)
 
 You can now review the plain/decrypted HTTP communications between the Client and the Server.
-
-
-
-## Disable TLS Session Secret Ethernet Trailers on Big-IP
-
-For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature, once you're finish with the Packet Capture activities: `tmsh modify sys db tcpdump.sslprovider value disable` .
-
-```
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
-sys db tcpdump.sslprovider {
-    value "enable"
-}
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh modify sys db tcpdump.sslprovider value disable
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
-sys db tcpdump.sslprovider {
-    value "disable"
-}
-[admin@ip-10-1-1-245:Active:Standalone] ~ #
-```
 
 
 
