@@ -136,23 +136,25 @@ You should now be able to decrypt TLS payload/data on connections which you capt
 
 
 
-## Review Decrypted TLS Messages
+## Review Decrypted HTTPS (HTTP over TLS) Messages
 
 To review decrypted messages faster, try to filter the displayed packets with `tcp.port==443`, then look for HTTP protocol (usually coloured differently).
 
 ![WireShark DisplayFilter FollowTLSStream](WireShark-DisplayFilter-FollowTLSStream.png)
 
-From 
+Right-click on the HTTP line item, and from the pop-up menu select `Follow` > `TLS Stream`.
+
+![WireShark FollowTLSStream](WireShark-FollowTLSStream.png)
+
+You can now review the plain/decrypted HTTP communications between the Client and the Server.
 
 
-
-
-, and then
 
 ## Disable TLS Session Secret Ethernet Trailers
 
-For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature.
+For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature, once you're finish with the Packet Capture activities: `tmsh modify sys db tcpdump.sslprovider value disable` .
 
+```
 [admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
 sys db tcpdump.sslprovider {
     value "enable"
@@ -163,15 +165,7 @@ sys db tcpdump.sslprovider {
     value "disable"
 }
 [admin@ip-10-1-1-245:Active:Standalone] ~ #
-
-
-
-
-
-
-
-
-
+```
 
 
 
