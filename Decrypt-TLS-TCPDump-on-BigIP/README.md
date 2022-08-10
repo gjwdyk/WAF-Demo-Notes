@@ -10,6 +10,7 @@
 PreRequisites:
 - [ ] Big-IP version 15.0.0 or later
 - [ ] `tshark` version 3.4.3 or later
+- [ ] WireShark version 3.2 or later
 
 
 
@@ -84,7 +85,7 @@ Note that you don't use space in the file paths and file names:
 - [ ] `C:\Users\HC\Downloads\ip-10-1-1-245.ap-southeast-1.compute.internal_20220810123945.pcap`
 - [ ] `C:\Users\HC\Downloads\pre_master_log.pms`
 
-
+The resulting Pre-Master Secret file will be similar to the following:
 
 ```
 C:\Users\HC\Downloads>type pre_master_log.pms
@@ -102,24 +103,17 @@ C:\Users\HC\Downloads>
 ```
 
 
-Disable TLS Session Secret Ethernet Trailers
---------------------------------------------
 
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
-sys db tcpdump.sslprovider {
-    value "enable"
-}
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh modify sys db tcpdump.sslprovider value disable
-[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
-sys db tcpdump.sslprovider {
-    value "disable"
-}
-[admin@ip-10-1-1-245:Active:Standalone] ~ #
+## Enable F5 Ethernet Trailers for TLS
 
+Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector enabled.
 
+- [ ] Navigate to `Analyze` > `Enabled Protocols`
 
-Enable F5 Ethernet Trailers for TLS
------------------------------------
+![WireShark Analyze EnabledProtocols](WireShark-Analyze-EnabledProtocols.png)
+
+Check the box to enable Protocol F5 TLS : Description F5 Ethernet Trailer Protocol - TLS Provider
+
 
 <<< Pictures for Dummies >>>
 
@@ -132,12 +126,33 @@ Create Pre-Master Secret Log File By Hand
 
 
 
-
 To search decrypted packages faster, try to filter:
 tcp.port==443
 then look for HTTP protocol (usually coloured differently), and then 
 
 
+
+
+
+
+
+
+
+
+## Disable TLS Session Secret Ethernet Trailers
+
+For security measures; ***Do NOT Forget*** to turn-off/disable the TLS Session Secret Ethernet Trailers feature.
+
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
+sys db tcpdump.sslprovider {
+    value "enable"
+}
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh modify sys db tcpdump.sslprovider value disable
+[admin@ip-10-1-1-245:Active:Standalone] ~ # tmsh list sys db tcpdump.sslprovider value
+sys db tcpdump.sslprovider {
+    value "disable"
+}
+[admin@ip-10-1-1-245:Active:Standalone] ~ #
 
 
 
