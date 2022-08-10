@@ -47,24 +47,28 @@ Got 9876543210
 
 
 
-## Create Pre-Master Secret Log File Using tshark
+## Copy the Captured Traffic to Your Terminal
 
 Copy the captured traffic to your terminal. Here it is assumed that you're using Windows and [WireShark](https://www.wireshark.org/) .
 If you're using WinSCP to download the captured file from Big-IP, sometimes WinSCP may have some error in Drag and Drop files (to copy to/from remote Big-IP unit):
 ![WinSCP Error in Drag and Drop File](WinSCP-Error.png)
 
-You can try instead to Copy and Paste using the WinSCP menu:
+You can try instead to Copy and Paste using the WinSCP menu; i.e. through right-click on the file you want to copy:
 ![WinSCP Copy](WinSCP-Copy.png)
+
+And right-click on the directory you want the file to be copied into on your local host.
 ![WinSCP Paste](WinSCP-Paste.png)
 
 
 
+## Create Pre-Master Secret Log File Using tshark
 
 
+```
 C:\Program Files\Wireshark>tshark -r C:\Users\HC\Downloads\ip-10-1-1-245.ap-southeast-1.compute.internal_20220810123945.pcap -Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog > C:\Users\HC\Downloads\pre_master_log.pms
 
 C:\Program Files\Wireshark>
-
+```
 
 
 Note that you don't use space in the file path and name:
