@@ -67,7 +67,7 @@ And right-click on the directory you want the file to be copied into on your loc
 
 
 
-## Create Pre-Master Secret Log File Using tshark
+## Create Pre-Master Secret Log File Using `tshark`
 
 PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with Wireshark by default. You can find `tshark.exe` in the installation directory of WireShark.
 If you use default installation directory, you may be able to find it inside `C:\Program Files\Wireshark\`
@@ -104,7 +104,7 @@ C:\Users\HC\Downloads>
 
 
 
-## Enable F5 Ethernet Trailers for TLS
+## Enable F5 Ethernet Trailers for TLS at WireShark
 
 Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector enabled.
 
@@ -116,13 +116,20 @@ Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector e
 
 
 
+## Load Pre-Master Secret Log File into WireShark
+
+Load the Pre-Master Secret Log file into WireShark to decrypt TLS payload.
+
+- [ ] In WireShark navigate to `Edit` > `Preferences`<br>
+   ![WireShark Edit Preferences](WireShark-Edit-Preferences.png)
 
 
-Create Pre-Master Secret Log File By Hand
------------------------------------------
 
-<<< Pictures for Dummies >>>
+ > `Protocols` > `TLS`
 
+
+In the section labeled '(Pre)-Master-Secret log filename' browse to the pre_master_log.pms file and click OK.
+If all goes well, you will now be observing decrypted L7 data.
 
 
 To search decrypted packages faster, try to filter:
