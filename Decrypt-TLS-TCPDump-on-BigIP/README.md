@@ -3,7 +3,7 @@
 ```
 ╔══════════════════════════════════════════════════╗
 ║   Reference:                                     ║
-║   [https://support.f5.com/csp/article/K31793632](https://support.f5.com/csp/article/K31793632)   ║
+║   https://support.f5.com/csp/article/K31793632   ║
 ╚══════════════════════════════════════════════════╝
 ```
 
