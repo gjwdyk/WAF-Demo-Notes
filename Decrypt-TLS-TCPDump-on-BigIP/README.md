@@ -129,26 +129,25 @@ Load the Pre-Master Secret Log file into WireShark to decrypt TLS payload:
 - [ ] Scroll down the supported protocols list until you find `TLS`. Click on the `TLS` item. The menu on the right should change to display attributes of the `TLS` protocol<br>
    ![WireShark Preferences Protocols TLS](WireShark-Preferences-Protocols-TLS.png)
 
-- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret file (i.e. from the example above, it is 'pre_master_log.pms' file) and click Open<br>
+- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret file (i.e. from the example above, it is 'pre_master_log.pms' file) and click Open, and then click OK<br>
    ![WireShark Preferences Protocols TLS PreMasterSecret](WireShark-Preferences-Protocols-TLS-PreMasterSecret.png)
 
-
-In the section labeled '(Pre)-Master-Secret log filename' browse to the pre_master_log.pms file and click OK.
-If all goes well, you will now be observing decrypted L7 data.
-
-
-To search decrypted packages faster, try to filter:
-tcp.port==443
-then look for HTTP protocol (usually coloured differently), and then 
+You should now be able to decrypt TLS payload/data on connections which you captured the Pre-Master Secret information.
 
 
 
+## Review Decrypted TLS Messages
 
+To review decrypted messages faster, try to filter the displayed packets with `tcp.port==443`, then look for HTTP protocol (usually coloured differently).
 
+![WireShark DisplayFilter FollowTLSStream](WireShark-DisplayFilter-FollowTLSStream.png)
+
+From 
 
 
 
 
+, and then
 
 ## Disable TLS Session Secret Ethernet Trailers
 
