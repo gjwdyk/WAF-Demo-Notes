@@ -7,8 +7,9 @@
 ╚══════════════════════════════════════════════════╝
 ```
 
-Prerequisite:
-- [ ] Big-IP version 15.0.0 or later.
+PreRequisites:
+- [ ] Big-IP version 15.0.0 or later
+- [ ] `tshark` version 3.4.3 or later
 
 
 
@@ -45,6 +46,10 @@ Got 9876543210
 [admin@ip-10-1-1-245:Active:Standalone] ~ #
 ```
 
+Important: When you perform a tcpdump capture with tcpdump.sslprovider enabled, understand that the TLS master secret will be written to the tcpdump capture itself. Be careful with whom you share the capture file.
+
+The same warning is also displayed when you do TCPDump: `tcpdump: WARNING: Using the "ssl" option captures additional information related to the SSL/TLS connections, such as master secrets. This enables some packet capture analysis tools to decrypt the SSL/TLS payload in the captured packets. Use only as needed for troubleshooting purposes, and handle captured data with caution.`
+
 
 
 ## Copy the Captured Traffic to Your Terminal
@@ -63,19 +68,25 @@ And right-click on the directory you want the file to be copied into on your loc
 
 ## Create Pre-Master Secret Log File Using tshark
 
+PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with Wireshark by default. You can find `tshark.exe` in the installation directory of WireShark.
+If you use default installation directory, you may be able to find it inside `C:\Program Files\Wireshark\`
 
+The command syntax: `tshark -r` [Captured Traffic File Path/Name] `-Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog >` [Resulting Pre-Master Secret File Path/Name]
+
+Example:
 ```
 C:\Program Files\Wireshark>tshark -r C:\Users\HC\Downloads\ip-10-1-1-245.ap-southeast-1.compute.internal_20220810123945.pcap -Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog > C:\Users\HC\Downloads\pre_master_log.pms
 
 C:\Program Files\Wireshark>
 ```
 
+Note that you don't use space in the file paths and file names:
+- [ ] `C:\Users\HC\Downloads\ip-10-1-1-245.ap-southeast-1.compute.internal_20220810123945.pcap`
+- [ ] `C:\Users\HC\Downloads\pre_master_log.pms`
 
-Note that you don't use space in the file path and name:
-C:\Users\HC\Downloads\ip-10-1-1-245.ap-southeast-1.compute.internal_20220810123945.pcap
-C:\Users\HC\Downloads\pre_master_log.pms
 
 
+```
 C:\Users\HC\Downloads>type pre_master_log.pms
 CLIENT_RANDOM e442c47ca13717c4f7217175cf74c474b64e9262cc1ed8f29fb136885ce03dd0 21d0829467bdb91f32bf5c8aa97d6a7f1bf73f208bfdfe80005cd393d9f517f5c2a0a0e14cc93d4588f6dfd4bfd54c05
 CLIENT_RANDOM f6c16dc760af06c21e8b020869b537dd5253d23a5b8f1594aaee5841f9450f1b 21d0829467bdb91f32bf5c8aa97d6a7f1bf73f208bfdfe80005cd393d9f517f5c2a0a0e14cc93d4588f6dfd4bfd54c05
@@ -88,7 +99,7 @@ CLIENT_RANDOM b4609d23105ac019b9ca3d9ea044a01f54b4a4eec24f30db0b9d460b70da986c 7
 CLIENT_RANDOM 221b7e5438d07996adee457ec199b07d8987f1e1286b58df92d78e71123a9777 7789b547f931ed20bf694f7a6342fdcc711ebf378d5793441a0ab284ad0f876983db11bd98a10f686716945daac21a26
 
 C:\Users\HC\Downloads>
-
+```
 
 
 Disable TLS Session Secret Ethernet Trailers
