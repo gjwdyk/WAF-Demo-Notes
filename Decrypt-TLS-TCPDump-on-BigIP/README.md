@@ -111,10 +111,10 @@ Open WireShark (version 3.2 or later) and ensure you have the F5 TLS Dissector e
 - [ ] Navigate to `Analyze` > `Enabled Protocols...`<br>
    ![WireShark Analyze EnabledProtocols](WireShark-Analyze-EnabledProtocols.png)
 
-Check the box to enable Protocol F5 TLS : Description F5 Ethernet Trailer Protocol - TLS Provider
+- [ ] Check the box to enable Protocol F5 TLS : Description F5 Ethernet Trailer Protocol - TLS Provider<br>
+   ![WireShark EnabledProtocols F5TLS](WireShark-EnabledProtocols-F5TLS.png)
 
 
-<<< Pictures for Dummies >>>
 
 
 
