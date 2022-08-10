@@ -55,7 +55,7 @@ The same warning is also displayed when you do TCPDump: `tcpdump: WARNING: Using
 
 ## Copy the Captured Traffic to Your Terminal
 
-Copy the captured traffic to your terminal. Here it is assumed that you're using Windows and [WireShark](https://www.wireshark.org/) .
+Copy the captured traffic to your terminal. This document assumes that you're using Windows and [WireShark](https://www.wireshark.org/) .
 If you're using WinSCP to download the captured file from Big-IP, sometimes WinSCP may have some error in Drag and Drop files (to copy to/from remote Big-IP unit):<br>
 ![WinSCP Error in Drag and Drop File](WinSCP-Error.png)
 
@@ -69,7 +69,7 @@ And right-click on the directory you want the file to be copied into on your loc
 
 ## Create Pre-Master Secret Log File Using `tshark`
 
-PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with Wireshark by default. You can find `tshark.exe` in the installation directory of WireShark.
+PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with WireShark by default. You can find `tshark.exe` in the installation directory of WireShark.
 If you use default installation directory, you may be able to find it inside `C:\Program Files\Wireshark\`
 
 The command syntax: `tshark -r` `[Captured Traffic File Path/Name]` `-Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog >` `[Resulting Pre-Master Secret File Path/Name]`
