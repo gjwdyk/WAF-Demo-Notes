@@ -71,7 +71,7 @@ And right-click on the directory you want the file to be copied into on your loc
 PreRequisite: `tshark` version 3.4.3 or later. `tshark` is usually installed along together with Wireshark by default. You can find `tshark.exe` in the installation directory of WireShark.
 If you use default installation directory, you may be able to find it inside `C:\Program Files\Wireshark\`
 
-The command syntax: `tshark -r` [Captured Traffic File Path/Name] `-Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog >` [Resulting Pre-Master Secret File Path/Name]
+The command syntax: `tshark -r` `[Captured Traffic File Path/Name]` `-Y f5ethtrailer.tls.keylog -Tfields -e f5ethtrailer.tls.keylog >` `[Resulting Pre-Master Secret File Path/Name]`
 
 Example:
 ```
