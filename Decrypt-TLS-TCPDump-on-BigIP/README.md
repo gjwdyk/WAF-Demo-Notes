@@ -33,7 +33,7 @@ sys db tcpdump.sslprovider {
 
 ## Capture Traffic with `--f5 ssl` flag
 
-To utilize the enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: `tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap` .
+To utilize the enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: `tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/\`/bin/hostname\`_\`date +%Y%m%d%H%M%S\`.pcap` .
 
 ```
 [admin@ip-10-1-1-245:Active:Standalone] ~ # tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap
