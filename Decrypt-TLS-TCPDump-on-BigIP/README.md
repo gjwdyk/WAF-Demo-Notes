@@ -33,7 +33,7 @@ sys db tcpdump.sslprovider {
 
 ## Capture Traffic with `--f5 ssl` flag
 
-To utilize the enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: ``tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap`` .
+To utilize the (newly) enabled functionality above, use `--f5 ssl` flag/option when doing the TCPDump. Example: ``tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap`` .
 
 ```
 [admin@ip-10-1-1-245:Active:Standalone] ~ # tcpdump -vvv -s0 -nni 0.0:nnnp --f5 ssl -w /var/tmp/`/bin/hostname`_`date +%Y%m%d%H%M%S`.pcap
@@ -49,7 +49,15 @@ Got 9876543210
 
 ## Create Pre-Master Secret Log File Using tshark
 
-To copy my files using winscp, I use right botton mouse > copy on file and rigth botton mouse  > paste on my "Downloads" folder.
+Copy the captured traffic to your terminal. Here it is assumed that you're using Windows and [WireShark](https://www.wireshark.org/) .
+If you're using WinSCP to download the captured file from Big-IP, sometimes WinSCP may have some error in Drag and Drop files (to copy to/from remote Big-IP unit):
+![WinSCP Error in Drag and Drop File](WinSCP-Error.png)
+
+You can try instead to Copy and Paste using the WinSCP menu:
+![WinSCP Copy](WinSCP-Copy.png)
+![WinSCP Paste](WinSCP-Paste.png)
+
+
 
 
 
