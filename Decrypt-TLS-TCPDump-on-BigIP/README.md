@@ -51,7 +51,7 @@ Got 9876543210
 [admin@ip-10-1-1-245:Active:Standalone] ~ #
 ```
 
-***Important***: When you perform a tcpdump capture with tcpdump.sslprovider enabled, understand that the TLS master secret will be written to the tcpdump capture itself. Be careful with whom you share the capture file.
+***Important***: When you perform a tcpdump capture with `tcpdump.sslprovider` enabled, please be ***reminded and warned*** that the TLS master secret will be written to the tcpdump capture itself. So you need to be mindful and careful with whom you share the capture file.
 
 The same warning is also displayed when you do TCPDump: `tcpdump: WARNING: Using the "ssl" option captures additional information related to the SSL/TLS connections, such as master secrets. This enables some packet capture analysis tools to decrypt the SSL/TLS payload in the captured packets. Use only as needed for troubleshooting purposes, and handle captured data with caution.`
 
