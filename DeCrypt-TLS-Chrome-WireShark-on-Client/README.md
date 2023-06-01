@@ -58,7 +58,7 @@ Configure Pre-Master Secret Log FileName at WireShark to point at the same file 
 - [ ] Scroll down the supported protocols list until you find `TLS`. Click on the `TLS` item. The menu on the right should change to display attributes of the `TLS` protocol<br>
    ![WireShark Preferences Protocols TLS](WireShark-Preferences-Protocols-TLS.png)
 
-- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret file ; i.e. the file indicated by the `SSLKEYLOGFILE` Environment Variable, which is created by Chrome/Chromium. Select the file, click Open, and then click OK<br>
+- [ ] Under the `(Pre)-Master-Secret log filename` browse to the resulting Pre-Master Secret Log File ; i.e. the file indicated by the `SSLKEYLOGFILE` Environment Variable, which is created by Chrome/Chromium. Select the file, click Open, and then click OK<br>
    ![WireShark Preferences Protocols TLS PreMasterSecret](WireSharkPreferencesProtocolsTLSPreMasterSecret.png)
 
 
@@ -68,9 +68,9 @@ Configure Pre-Master Secret Log FileName at WireShark to point at the same file 
 You should now be able to decrypt TLS payload/data on connections which you captured the Pre-Master Secret information.
 Note that if you missed to capture the Pre-Master Secret information, TLS traffic which uses that Pre-Master Secret will not be decrypt-able.
 
-One sequence that can be reviewed in order to avoid this missing Pre-Master Secret:
+One sequence that can be reviewed in order to avoid missing Pre-Master Secret information:
 
-- [ ] Empty (delete the previous content) of the Pre-Master Secret Log File. Save the empty file.
+- [ ] Empty (delete the previous content) of the Pre-Master Secret Log File. Save the empty file, and Close the file.
 - [ ] Open the Chrome/Chromium browser with empty tab/page.
 - [ ] Open the WireShark and start to do capture on the target interface(s).
 - [ ] Back to the empty browser, and start to browse to the target site.
