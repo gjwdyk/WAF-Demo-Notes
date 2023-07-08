@@ -27,9 +27,9 @@ On Windows based OS, below screen captures may help you to setup the `SSLKEYLOGF
 
 ![Windows ControlPanel System AdvancedSystemSettings](WindowsControlPanelSystemAdvancedSystemSettings.png)
 
-![Windows ControlPanel System AdvancedSystemSettings EnvironmentVariables](WindowsControlPanelSystemAdvancedSystemSettingsEnvironmentVariables.png)
-
 ![Windows ControlPanel System AdvancedSystemSettings EnvironmentVariables NewEdit](WindowsControlPanelSystemAdvancedSystemSettingsEnvironmentVariablesNewEdit.png)
+
+![Windows ControlPanel System AdvancedSystemSettings EnvironmentVariables](WindowsControlPanelSystemAdvancedSystemSettingsEnvironmentVariables.png)
 
 The example screen capture points the `SSLKEYLOGFILE` Environment Variable to `SSLKeyLogFile` file located within the user's `Downloads` folder.
 
